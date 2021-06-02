@@ -20,8 +20,8 @@
         color: $slate;
         font-size: 6rem;
         transition: all 0.5s ease;
-        
-        i:hover {
+        display: inline-block;       
+        &:hover {
             color: $green;
             transform: scale(1.1);
         }
