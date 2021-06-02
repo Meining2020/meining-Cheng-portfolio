@@ -71,6 +71,60 @@ span {
     padding: 2rem;
     margin: 2rem 0;
     &:hover {
-        background-color: #133040;
+        background-color: $hoverColor;
+    }
+}
+
+.numbered-heading {
+    font-size: 4rem;
+    position: relative;
+    counter-increment: listCounter;
+    &::after {
+        position: absolute;
+        content: "";
+        width: 430px;
+        height: 2px;
+        background-color: $lightestNavy;
+        top: 23px;
+        left: 300px;
+    }
+    &::before {
+        content: "0" counter(listCounter) ".";
+        font-size: 4rem;
+        color: $green;
+        font-family: $secondaryFont;
+        margin-right: 5px;
+    }
+}
+
+img {
+    opacity: .6;
+    transition: all .5s ;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.overlay {
+    background-color: $hoverColor;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    // top: -2rem;
+    // left: -2rem;
+    // &:hover {
+    //     top: 0rem;
+    //     left: 0rem;
+    // }
+}
+
+.img-hover {
+    img:before {
+        content: "";
+        color: $hoverColor;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
     }
 }

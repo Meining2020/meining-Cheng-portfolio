@@ -17,6 +17,7 @@ header {
 .sticky {
     background-color: $lightNavy;
     position: fixed;
+    z-index: 5;
 }
 
 .nav-menu ul {
