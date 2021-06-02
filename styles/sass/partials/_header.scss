@@ -40,7 +40,7 @@ header {
         }
         &::before {
             content: "0" counter(listCounter) ".";
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: $green;
             margin-right: 5px;
         }

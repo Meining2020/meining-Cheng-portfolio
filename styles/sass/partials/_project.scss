@@ -1,0 +1,70 @@
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    text-align: right;
+    margin: 5rem auto 0;
+}
+
+.project-image {
+    width: 50%;
+    max-width: 500px;
+    min-width: 370px;
+    &:hover {
+        z-index: 3;
+    }
+
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-width: 400px;
+    
+    .project-heading {
+        font-size: 2.5rem;
+        color: $slate;
+    }
+
+    .skills-used {
+        display: flex;
+        color: $lightestSlate;
+        font: 1.5rem $secondaryFont;
+        align-self: flex-end;
+        li {
+            margin: 1rem 0 1rem 1rem;
+            color: $green;
+        }
+    }
+}
+
+
+
+    .project-description {
+        background-color: $lightestNavy;
+        // position: absolute;
+        margin-left: -30%;
+        z-index: 2;
+        p {
+            padding: 2rem;
+        }
+        a {
+            color: $lightestSlate;
+            text-decoration: underline;
+        }
+    }
+
+.project-links {
+    i {
+        font-size: 2rem;
+        margin-left: 2rem;
+        display: inline-block;
+        color: $slate;
+        &:hover {
+            color: $green;
+            transform: scale(1.2);
+        }
+    }
+}

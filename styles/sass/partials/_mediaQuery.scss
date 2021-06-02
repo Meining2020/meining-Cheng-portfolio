@@ -5,6 +5,7 @@
     }
     .about-text {
         width: 80%;
+        margin: 0 auto;
     }
 }
 
@@ -22,7 +23,7 @@
             left: 220px;
         }
         &::before {
-        font-size: 3rem;
+            font-size: 3rem;
         }
     }
 
@@ -59,34 +60,82 @@
 
     .nav-show {
         right: 0;
-        
     }
 
-    .big-heading  {
+    .big-heading {
         font-size: 7vh;
     }
 
-
     //about section
-    
+}
 
+@media (max-width: 840px) {
+    //project section
+    .project-container {
+        text-align: center;
+        position: relative;
+        max-width: 500px;
+        // z-index: 4;
+    }
+    .project-image {
+        width: 100%;
+        min-width: 0;
+        &:hover {
+            z-index: 5;
+        }
+    }
+    .project-content {
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        position: absolute;
+        background-color: $projectHoverColor;
+        .project-description {
+            margin: 0 auto;
+            background-color: transparent;
+            // width: 100%;
+            // padding: 1rem;
+            p {
+                padding: 0;
+            }
+        }
+        .skills-used {
+            align-self: center;
+        }
+    }
 }
 
 @media (max-width: 480px) {
-
     .wrapper {
         width: 95%;
     }
-    // p {
-    //     font-size: 1.8rem;
-    // }
+    p, a {
+        font-size: 1.4rem;
+    }
     .nav-bar {
         padding: 2rem 1rem;
     }
     .home-content {
         text-align: center;
     }
-    .big-heading  {
-        font-size: 5vh;
+    .big-heading {
+        font-size: 4rem;
+    }
+    .numbered-heading {
+        font-size: 2rem;
+        &::before {
+            font-size: 2rem;
+        }
+    }
+    .project-content {
+        .project-heading {
+            font-size: 2rem;
+        }
+        .skills-used {
+            li {
+                margin: .5rem 0 0.5rem .5rem;
+                font-size: 1.2rem;
+            }
+        }
     }
 }
