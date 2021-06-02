@@ -1,7 +1,32 @@
+@media (max-width: 1374px) {
+    .about-content {
+        justify-content: center;
+        align-items: center;
+    }
+    .about-text {
+        width: 80%;
+    }
+}
+
 @media (max-width: 940px) {
+    //general
     .wrapper {
         width: 90%;
     }
+
+    .numbered-heading {
+        font-size: 3rem;
+        &::after {
+            width: 40%;
+            top: 20px;
+            left: 220px;
+        }
+        &::before {
+        font-size: 3rem;
+        }
+    }
+
+    //header
     .nav-bar {
         padding: 2rem 3rem;
     }
@@ -40,6 +65,11 @@
     .big-heading  {
         font-size: 7vh;
     }
+
+
+    //about section
+    
+
 }
 
 @media (max-width: 480px) {
@@ -47,6 +77,9 @@
     .wrapper {
         width: 95%;
     }
+    // p {
+    //     font-size: 1.8rem;
+    // }
     .nav-bar {
         padding: 2rem 1rem;
     }

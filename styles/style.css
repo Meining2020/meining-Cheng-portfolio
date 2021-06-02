@@ -269,7 +269,7 @@ html {
 }
 
 body {
-  background-color: #0a192f;
+  background-color: #162129;
 }
 
 .wrapper {
@@ -291,7 +291,7 @@ button {
 
 h1 {
   font-size: 2rem;
-  color: #64ffda;
+  color: #a7fab7;
   font-family: "Roboto Mono", monospace;
   margin: 2rem 0;
 }
@@ -320,26 +320,76 @@ p {
 }
 
 span {
-  color: #64ffda;
+  color: #a7fab7;
 }
 
 .fas {
   font-size: 2rem;
-  color: #64ffda;
+  color: #a7fab7;
 }
 
 .button-link {
   font-family: "Roboto Mono", monospace;
   display: inline-block;
-  border: solid 1px #64ffda;
+  border: solid 1px #a7fab7;
   border-radius: 4px;
-  color: #64ffda;
+  color: #a7fab7;
   padding: 2rem;
   margin: 2rem 0;
 }
 
 .button-link:hover {
-  background-color: #133040;
+  background-color: rgba(100, 255, 218, 0.1);
+}
+
+.numbered-heading {
+  font-size: 4rem;
+  position: relative;
+  counter-increment: listCounter;
+}
+
+.numbered-heading::after {
+  position: absolute;
+  content: "";
+  width: 430px;
+  height: 2px;
+  background-color: #233554;
+  top: 23px;
+  left: 300px;
+}
+
+.numbered-heading::before {
+  content: "0" counter(listCounter) ".";
+  font-size: 4rem;
+  color: #a7fab7;
+  font-family: "Roboto Mono", monospace;
+  margin-right: 5px;
+}
+
+img {
+  opacity: .6;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+img:hover {
+  opacity: 1;
+}
+
+.overlay {
+  background-color: rgba(100, 255, 218, 0.1);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.img-hover img:before {
+  content: "";
+  color: rgba(100, 255, 218, 0.1);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
 }
 
 header {
@@ -347,7 +397,7 @@ header {
 }
 
 .nav-bar {
-  background-color: #0a192f;
+  background-color: #162129;
   width: 100%;
   margin: 0 auto;
   display: -webkit-box;
@@ -364,6 +414,7 @@ header {
 .sticky {
   background-color: #112240;
   position: fixed;
+  z-index: 5;
 }
 
 .nav-menu ul {
@@ -386,17 +437,17 @@ header {
 }
 
 .nav-menu ul li a:hover {
-  color: #64ffda;
+  color: #a7fab7;
 }
 
 .nav-menu ul li a:focus {
-  border: dashed 2px #64ffda;
+  border: dashed 2px #a7fab7;
 }
 
 .nav-menu ul li a::before {
   content: "0" counter(listCounter) ".";
   font-size: 2rem;
-  color: #64ffda;
+  color: #a7fab7;
   margin-right: 5px;
 }
 
@@ -430,9 +481,113 @@ header {
   font-size: 6rem;
 }
 
+.about .about-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.about-text {
+  width: 60%;
+  margin-top: 3rem;
+  margin-right: 5%;
+}
+
+.about-text p {
+  text-align: justify;
+}
+
+.photo-container {
+  width: 300px;
+  height: 300px;
+  margin: 4rem;
+  border: solid 2px #a7fab7;
+  position: relative;
+}
+
+.photo-container img {
+  width: 300px;
+  position: relative;
+}
+
+.photo-container img::before {
+  content: "";
+  color: rgba(100, 255, 218, 0.1);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+}
+
+.skills {
+  margin: 2rem 0;
+}
+
+.skills .skill-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3rem auto;
+}
+
+.skill-item {
+  width: 33%;
+  text-align: center;
+  display: block;
+}
+
+.skill-item p {
+  margin-bottom: 2rem;
+}
+
+.skill-item span {
+  color: #8892b0;
+  font-size: 6rem;
+}
+
+.skill-item span:hover {
+  color: #a7fab7;
+}
+
+@media (max-width: 1374px) {
+  .about-content {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-text {
+    width: 80%;
+  }
+}
+
 @media (max-width: 940px) {
   .wrapper {
     width: 90%;
+  }
+  .numbered-heading {
+    font-size: 3rem;
+  }
+  .numbered-heading::after {
+    width: 40%;
+    top: 20px;
+    left: 220px;
+  }
+  .numbered-heading::before {
+    font-size: 3rem;
   }
   .nav-bar {
     padding: 2rem 3rem;

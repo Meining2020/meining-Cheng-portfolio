@@ -17,3 +17,6 @@ burgerIcon.addEventListener('click', function () {
     navIcon.classList.toggle('fa-times');
 })
 
+// const skilIcons = {
+//     HTML5: 
+// }

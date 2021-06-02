@@ -1,0 +1,26 @@
+.skills {
+    margin: 2rem 0;
+    .skill-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 3rem auto;
+    }
+}
+
+.skill-item {
+    width: 33%;
+    text-align: center;
+    display: block;
+    p {
+        margin-bottom: 2rem;
+    }
+    span {
+        color: $slate;
+        font-size: 6rem;
+        &:hover {
+            color: $green;
+        }
+    }
+}
