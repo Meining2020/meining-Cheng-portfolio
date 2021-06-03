@@ -144,6 +144,10 @@
         &::before {
             font-size: 2rem;
         }
+        &::after {
+        top: 12px;
+        left: 160px;
+    }
     }
     .project-content {
         .project-heading {

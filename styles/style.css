@@ -363,9 +363,9 @@ main {
   content: "";
   width: 430px;
   height: 2px;
-  background-color: #2d424e;
-  top: 23px;
-  left: 300px;
+  background-color: #1a373c;
+  top: 18px;
+  left: 230px;
 }
 
 .numbered-heading::before {
@@ -377,29 +377,15 @@ main {
 }
 
 img {
-  opacity: .6;
   -webkit-transition: all .5s;
   transition: all .5s;
+  -webkit-filter: grayscale(80%);
+          filter: grayscale(80%);
 }
 
 img:hover {
-  opacity: 1;
-}
-
-.overlay {
-  background-color: rgba(100, 255, 218, 0.1);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-
-.img-hover img:before {
-  content: "";
-  color: rgba(100, 255, 218, 0.1);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 2;
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
 }
 
 .icon-links i {
@@ -568,6 +554,7 @@ header {
 .about-text p {
   text-align: justify;
   line-height: 1.7;
+  padding-top: 1rem;
 }
 
 .photo-container {
@@ -580,17 +567,9 @@ header {
 
 .photo-container img {
   width: 300px;
-  position: relative;
-}
-
-.photo-container img::before {
-  content: "";
-  color: rgba(100, 255, 218, 0.1);
-  width: 100%;
-  height: 100%;
   position: absolute;
-  z-index: 2;
-  top: 20px;
+  top: -20px;
+  left: 20px;
 }
 
 .skills .skill-list {
@@ -615,7 +594,7 @@ header {
 }
 
 .skill-item p {
-  margin-bottom: 2rem;
+  margin: 2rem;
 }
 
 .skill-item i {
@@ -644,7 +623,7 @@ header {
   -ms-flex-line-pack: center;
       align-content: center;
   text-align: right;
-  margin: 5rem auto 0;
+  margin: 8rem auto 0;
 }
 
 .project-image {
@@ -690,7 +669,7 @@ header {
 }
 
 .project-description {
-  background-color: #2d424e;
+  background-color: #1a373c;
   margin-left: -60%;
   z-index: 2;
 }
@@ -801,7 +780,7 @@ form .submit-button {
 
 footer {
   margin-top: 2rem;
-  background-color: #2d424e;
+  background-color: #1a373c;
 }
 
 footer p {
@@ -958,6 +937,10 @@ footer p {
   }
   .numbered-heading::before {
     font-size: 2rem;
+  }
+  .numbered-heading::after {
+    top: 12px;
+    left: 160px;
   }
   .project-content .project-heading {
     font-size: 2rem;
