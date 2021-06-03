@@ -81,10 +81,14 @@ section {
     }
 }
 
+main {
+    counter-reset: headingCounter;
+}
+
 .numbered-heading {
     font-size: 3rem;
     position: relative;
-    counter-increment: listCounter;
+    counter-increment: headingCounter;
     &::after {
         position: absolute;
         content: "";
@@ -95,7 +99,7 @@ section {
         left: 300px;
     }
     &::before {
-        content: "0" counter(listCounter) ".";
+        content: "0" counter(headingCounter) ".";
         font-size: 3rem;
         color: $green;
         font-family: $secondaryFont;

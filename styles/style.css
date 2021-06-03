@@ -348,10 +348,14 @@ section {
   background-color: rgba(100, 255, 218, 0.1);
 }
 
+main {
+  counter-reset: headingCounter;
+}
+
 .numbered-heading {
   font-size: 3rem;
   position: relative;
-  counter-increment: listCounter;
+  counter-increment: headingCounter;
 }
 
 .numbered-heading::after {
@@ -365,7 +369,7 @@ section {
 }
 
 .numbered-heading::before {
-  content: "0" counter(listCounter) ".";
+  content: "0" counter(headingCounter) ".";
   font-size: 3rem;
   color: #a7fab7;
   font-family: "Roboto Mono", monospace;
