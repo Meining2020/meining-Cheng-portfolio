@@ -7,6 +7,9 @@
         width: 80%;
         margin: 0 auto;
     }
+    .contact-content {
+        width: 100%;
+    }
 }
 
 @media (max-width: 940px) {
@@ -65,8 +68,6 @@
     .big-heading {
         font-size: 7vh;
     }
-
-    //about section
 }
 
 @media (max-width: 840px) {
@@ -103,13 +104,30 @@
             align-self: center;
         }
     }
+
+    //about section
+    .about-content {
+        width: 100%;
+    }
+
+    //contact section
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-context,
+    form {
+        width: 80%;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 480px) {
     .wrapper {
         width: 95%;
     }
-    p, a {
+    p,
+    a {
         font-size: 1.4rem;
     }
     .nav-bar {
@@ -133,9 +151,18 @@
         }
         .skills-used {
             li {
-                margin: .5rem 0 0.5rem .5rem;
+                margin: 0.5rem 0 0.5rem 0.5rem;
                 font-size: 1.2rem;
             }
+        }
+    }
+
+    //contact section
+    .contact-context,
+    form {
+        width: 100%;
+        input, textarea {
+            font-size: 1.4rem;
         }
     }
 }

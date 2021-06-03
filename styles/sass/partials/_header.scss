@@ -1,7 +1,16 @@
 // header styling
 
 header {
-    min-height: 100vh;
+    height: 100vh;
+    position: relative;
+}
+
+.logo {
+    color:$green;
+    transition: all 0.5s ease;
+    &:hover {
+        transform: scaleX(1.2);
+    }
 }
 
 .nav-bar {
@@ -71,6 +80,27 @@ header {
     font-size: 6rem;
 }
 
+.scroll-down-button {
+    width: 40px;
+    margin: 0 auto;
+    i {
+        position: absolute;
+        font-size: 5rem;
+        cursor: pointer;
+    }
+}
 
+//animation
+@keyframes arrow {
+    0% {
+        bottom: 2rem;
+    }
+    100% {
+        bottom: 2.2rem;
+    }
+}
 
+.arrow-animation {
+    animation: arrow 1.5s linear infinite;
+}
 

@@ -1,17 +1,17 @@
-.about {
-    // height: 600px;
-    .about-content {
-        display: flex;
-        flex-wrap: wrap;
-    }
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 1rem auto;
 }
 
 .about-text {
     width: 50%;
-    // margin-top: 3rem;
-    margin-right: 5%;
+    margin: auto;
     p {
         text-align: justify;
+        line-height: 1.7;
     }
 }
 
@@ -21,11 +21,11 @@
     margin: 4rem;
     border: solid 2px $green;
     position: relative;
-    img {      
+    img {
         width: 300px;
-        position: relative;       
+        position: relative;
     }
-    img::before{
+    img::before {
         content: "";
         color: $hoverColor;
         width: 100%;
