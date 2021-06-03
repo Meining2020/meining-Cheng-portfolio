@@ -21,9 +21,10 @@
 
 <body>
     <header>
+
         <nav class="nav-bar" id='nav-bar'>
             <div class="logo">
-                <a href="#" class="logo">logo</a>
+                <a href="#" class="logo">&lt; M &gt;</a>
             </div>
 
             <div class="nav-menu" id="nav-menu">
@@ -56,6 +57,9 @@
                 <a href="#contact" class="button-link">Get in Touch!</a>
             </div>
         </div>
+        <div class="scroll-down-button">
+            <i class="fas fa-angle-down arrow-animation" id="scroll-down-icon"></i>
+        </div>
     </header>
 
     <main>
@@ -69,7 +73,7 @@
                             building engaging,
                             accessible and responsive websites and apps. My experience working as a Quality Assurance
                             manager in
-                            faced-pacedmanufacturing industries cultivated my abilities to make soundand meticulous
+                            faced-paced manufacturing industries cultivated my abilities to make sound and meticulous
                             decisions as well as
                             handle complex tasks synchronously.</p>
                         <p>When I am not coding, I enjoy watch movies and playing video games. </p>
@@ -153,97 +157,105 @@
         <section class="projects" id="projects">
             <div class="wrapper">
                 <h2 class="numbered-heading">Projects</h2>
-                <!-- Foodie's cookbook -->
-                <div class="project-container">
-                    <div class="project-image">
-                        <img src="./assets/foodies-cookbook.png" alt="sceenshot of foodie's cookcook">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-heading">Foodie's CookBook</h3>
-                        <div class="project-description">
-                            <p>Foodie's CookBook is a react based app which allows users to enter keyword to search food
-                                recipes and filter results based on diet type using EDMAN API.</p>
+                <div class="project-group">
+                    <!-- Foodie's cookbook -->
+                    <div class="project-container">
+                        <div class="project-image">
+                            <img src="./assets/foodies-cookbook.png" alt="sceenshot of foodie's cookcook">
                         </div>
-                        <ul class="skills-used">
-                            <li>React</li>
-                            <li>Firebase</li>
-                            <li>API</li>
-                            <li>JavaScript</li>
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                        </ul>
-                        <div class="icon-links">
-                            <a href="https://github.com/Meining2020/foodies-cookbook" target="_blank" rel="noopener">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://quizzical-noyce-09c2cc.netlify.app/" target="_blank" rel="noopener">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- backcronym generator -->
-                <div class="project-container">
-                    <div class="project-image">
-                        <img src="./assets/backcronym-generator.png" alt="sceenshot of backcronym generator">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-heading">Backcronym Generator</h3>
-                        <div class="project-description">
-                            <p>Backcronym generator is here to generate a backronym which is an acronym created from an
-                                exsiting word. This React/API web application was built collaboratively with teammates
-                                <a href="#">Jake Spodek</a>, <a href="#">Olivia Heulitt</a> and <a href="#">Zach
-                                    Bines</a>.
-                            </p>
-                        </div>
-                        <ul class="skills-used">
-                            <li>React</li>
-                            <li>Firebase</li>
-                            <li>API</li>
-                            <li>JavaScript</li>
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                        </ul>
-                        <div class="icon-links">
-                            <a href="https://github.com/jzom-derulo/backronymGenerator" target="_blank" rel="noopener">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://backronymgenerator.netlify.app/" target="_blank" rel="noopener">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
+                        <div class="project-content">
+                            <h3 class="project-heading">Foodie's CookBook</h3>
+                            <div class="project-description">
+                                <p>Foodie's CookBook is a react based app which allows users to enter keyword to search
+                                    food
+                                    recipes and filter results based on diet type using EDMAN API.</p>
+                            </div>
+                            <ul class="skills-used">
+                                <li>React</li>
+                                <li>Firebase</li>
+                                <li>API</li>
+                                <li>JavaScript</li>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                            </ul>
+                            <div class="icon-links">
+                                <a href="https://github.com/Meining2020/foodies-cookbook" target="_blank"
+                                    rel="noopener">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://quizzical-noyce-09c2cc.netlify.app/" target="_blank" rel="noopener">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <!-- backcronym generator -->
+                    <div class="project-container reverse-container">
+                        <div class="project-image">
+                            <img src="./assets/backcronym-generator.png" alt="sceenshot of backcronym generator">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-heading">Backcronym Generator</h3>
+                            <div class="project-description">
+                                <p>Backcronym generator is here to generate a backronym which is an acronym created from
+                                    an
+                                    exsiting word. This React/API web application was built collaboratively with
+                                    teammates
+                                    <a href="#">Jake Spodek</a>, <a href="#">Olivia Heulitt</a> and <a href="#">Zach
+                                        Bines</a>.
+                                </p>
+                            </div>
+                            <ul class="skills-used">
+                                <li>React</li>
+                                <li>Firebase</li>
+                                <li>API</li>
+                                <li>JavaScript</li>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                            </ul>
+                            <div class="icon-links">
+                                <a href="https://github.com/jzom-derulo/backronymGenerator" target="_blank"
+                                    rel="noopener">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://backronymgenerator.netlify.app/" target="_blank" rel="noopener">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
-                <!-- TMDB movie fun -->
-                <div class="project-container">
-                    <div class="project-image">
-                        <img src="./assets/tmdb-movie-discover.png" alt="sceenshot of TMDB movie fun">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-heading">TMDB Movie Fun</h3>
-                        <div class="project-description">
-                            <p>TMDB Movie Fun is a movie discover app that allows users to search movies bytitles and
-                                genres, and obtain detailed information about
-                                themovie and cast. This is a paired programming project created in collaboration with <a
-                                    href="#">Seunggi Lee</a>.</p>
+                    <!-- TMDB movie fun -->
+                    <div class="project-container">
+                        <div class="project-image">
+                            <img src="./assets/tmdb-movie-discover.png" alt="sceenshot of TMDB movie fun">
                         </div>
-                        <ul class="skills-used">
-                            <li>API</li>
-                            <li>JavaScript</li>
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                            <li>SASS</li>
-                        </ul>
-                        <div class="icon-links">
-                            <a href="https://github.com/SeunggiLeeMeiningChengProject2/TMDBFunMovie" target="_blank"
-                                rel="noopener">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://seunggileemeiningchengproject2.github.io/TMDBFunMovie/" target="_blank"
-                                rel="noopener">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
+                        <div class="project-content">
+                            <h3 class="project-heading">TMDB Movie Fun</h3>
+                            <div class="project-description">
+                                <p>TMDB Movie Fun is a movie discover app that allows users to search movies bytitles
+                                    and
+                                    genres, and obtain detailed information about
+                                    themovie and cast. This is a paired programming project created in collaboration
+                                    with <a href="#">Seunggi Lee</a>.</p>
+                            </div>
+                            <ul class="skills-used">
+                                <li>API</li>
+                                <li>JavaScript</li>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>SASS</li>
+                            </ul>
+                            <div class="icon-links">
+                                <a href="https://github.com/SeunggiLeeMeiningChengProject2/TMDBFunMovie" target="_blank"
+                                    rel="noopener">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://seunggileemeiningchengproject2.github.io/TMDBFunMovie/" target="_blank"
+                                    rel="noopener">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -257,7 +269,7 @@
                 <h2 class="numbered-heading">Contact</h2>
                 <div class="contact-content">
                     <div class="contact-context">
-                        <p>If you have any questions about the me or my projects, please free to shot me a message via
+                        <p>If you have any questions about me or my projects, please free to shot me a message via
                             the form or directly
                             drop an email to my inbox.</p>
                         <a href="mailto:meining.cheng@gmail.com">meining.cheng@gmail.com</a>
@@ -291,9 +303,10 @@
 
                         <label for="email" class="sr-only">Email</label>
                         <input type="text" id="email" placeholder="Email" required>
-                        
+
                         <label for="message" class="sr-only">Input message</label>
-                        <textarea name="message" id="message" cols="20" rows="10" placeholder="Hi, Meining! Let's chat!"required ></textarea>
+                        <textarea name="message" id="message" cols="20" rows="5" placeholder="Hi, Meining! Let's chat!"
+                            required></textarea>
 
                         <button type="submit" class="button-link submit-button">Message Me!</button>
 
@@ -302,16 +315,11 @@
 
             </div>
         </section>
-
-
-
-
-
     </main>
 
     <!-- footer -->
     <footer>
-        <p>Inspired by brittany Chiang & Developed by Meining Cheng</p>
+        <p>© Inspired by brittany Chiang & Developed by Meining Cheng</p>
     </footer>
 
     <!-- link to JS -->

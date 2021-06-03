@@ -17,3 +17,9 @@ burgerIcon.addEventListener('click', function () {
     navIcon.classList.toggle('fa-times');
 })
 
+
+const arrowIcon = document.querySelector('#scroll-down-icon');
+arrowIcon.addEventListener('click', function () {
+    arrowIcon.scrollIntoView();
+})
+

@@ -14,7 +14,6 @@
     &:hover {
         z-index: 3;
     }
-
 }
 
 .project-content {
@@ -40,19 +39,38 @@
     }
 }
 
+.project-description {
+    background-color: $lightestNavy;
+    // position: absolute;
+    margin-left: -60%;
+    z-index: 2;
+    p {
+        padding: 2rem;
+    }
+    a {
+        color: $lightestSlate;
+        text-decoration: underline;
+    }
+}
 
-
+.reverse-container {
+    flex-direction: row-reverse;
+    text-align: left;
     .project-description {
-        background-color: $lightestNavy;
-        // position: absolute;
-        margin-left: -60%;
-        z-index: 2;
-        p {
-            padding: 2rem;
-        }
-        a {
-            color: $lightestSlate;
-            text-decoration: underline;
+        margin-right: -60%;
+        margin-left: 0;
+    }
+
+    .skills-used {
+        align-self: flex-start;
+        li {
+            margin-left: 0;
+            margin-right: 1rem;
         }
     }
 
+    .icon-links i {
+        margin-left: 0;
+        margin-right: 2rem;
+    }
+}
