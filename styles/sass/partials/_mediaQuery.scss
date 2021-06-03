@@ -17,7 +17,7 @@
     .wrapper {
         width: 90%;
     }
-
+    
     .numbered-heading {
         font-size: 3rem;
         &::after {
@@ -76,32 +76,47 @@
         text-align: center;
         position: relative;
         max-width: 500px;
-        // z-index: 4;
     }
     .project-image {
         width: 100%;
         min-width: 0;
-        &:hover {
-            z-index: 5;
-        }
+        opacity: 0.4;
     }
+
+    .image2 {
+        display: block;
+    }
+    .image1,
+    .image3 {
+        display: none;
+    }
+
     .project-content {
         width: 100%;
         height: 100%;
         max-width: none;
         position: absolute;
         background-color: $projectHoverColor;
+        padding: 2rem;
+        .project-heading,
+        p,
+        a {
+            color: $white;
+        }
         .project-description {
             margin: 0 auto;
             background-color: transparent;
-            // width: 100%;
-            // padding: 1rem;
             p {
-                padding: 0;
+                padding: 1rem;
             }
         }
         .skills-used {
             align-self: center;
+            margin-bottom: 1rem;
+        }
+
+        .icon-links i {
+            margin: 0 2rem;
         }
     }
 
@@ -122,14 +137,21 @@
     }
 }
 
+@media (max-width: 525px) {
+    .image3 {
+        display: block;
+    }
+    .image1,
+    .image2 {
+        display: none;
+    }
+}
+
 @media (max-width: 480px) {
     .wrapper {
         width: 95%;
     }
-    p,
-    a {
-        font-size: 1.4rem;
-    }
+
     .nav-bar {
         padding: 2rem 1rem;
     }
@@ -145,9 +167,9 @@
             font-size: 2rem;
         }
         &::after {
-        top: 12px;
-        left: 160px;
-    }
+            top: 12px;
+            left: 160px;
+        }
     }
     .project-content {
         .project-heading {
@@ -156,7 +178,7 @@
         .skills-used {
             li {
                 margin: 0.5rem 0 0.5rem 0.5rem;
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
         }
     }
@@ -165,8 +187,16 @@
     .contact-context,
     form {
         width: 100%;
-        input, textarea {
+        input,
+        textarea {
             font-size: 1.4rem;
         }
+    }
+}
+
+@media (max-width: 396px) {
+    p,
+    a {
+        font-size: 1.4rem;
     }
 }

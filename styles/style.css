@@ -390,7 +390,7 @@ img:hover {
 
 .icon-links i {
   font-size: 2rem;
-  margin-left: 2rem;
+  margin-left: 4rem;
   display: inline-block;
   color: #8892b0;
 }
@@ -636,6 +636,10 @@ header {
   z-index: 3;
 }
 
+.image2, .image3 {
+  display: none;
+}
+
 .project-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -708,7 +712,7 @@ header {
 
 .reverse-container .icon-links i {
   margin-left: 0;
-  margin-right: 2rem;
+  margin-right: 4rem;
 }
 
 .contact-content {
@@ -876,9 +880,14 @@ footer p {
   .project-image {
     width: 100%;
     min-width: 0;
+    opacity: 0.4;
   }
-  .project-image:hover {
-    z-index: 5;
+  .image2 {
+    display: block;
+  }
+  .image1,
+  .image3 {
+    display: none;
   }
   .project-content {
     width: 100%;
@@ -886,18 +895,28 @@ footer p {
     max-width: none;
     position: absolute;
     background-color: rgba(20, 34, 30, 0.733);
+    padding: 2rem;
+  }
+  .project-content .project-heading,
+  .project-content p,
+  .project-content a {
+    color: #e6f1ff;
   }
   .project-content .project-description {
     margin: 0 auto;
     background-color: transparent;
   }
   .project-content .project-description p {
-    padding: 0;
+    padding: 1rem;
   }
   .project-content .skills-used {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    margin-bottom: 1rem;
+  }
+  .project-content .icon-links i {
+    margin: 0 2rem;
   }
   .about-content {
     width: 100%;
@@ -915,13 +934,19 @@ footer p {
   }
 }
 
+@media (max-width: 525px) {
+  .image3 {
+    display: block;
+  }
+  .image1,
+  .image2 {
+    display: none;
+  }
+}
+
 @media (max-width: 480px) {
   .wrapper {
     width: 95%;
-  }
-  p,
-  a {
-    font-size: 1.4rem;
   }
   .nav-bar {
     padding: 2rem 1rem;
@@ -947,15 +972,23 @@ footer p {
   }
   .project-content .skills-used li {
     margin: 0.5rem 0 0.5rem 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   .contact-context,
   form {
     width: 100%;
   }
-  .contact-context input, .contact-context textarea,
+  .contact-context input,
+  .contact-context textarea,
   form input,
   form textarea {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 396px) {
+  p,
+  a {
     font-size: 1.4rem;
   }
 }

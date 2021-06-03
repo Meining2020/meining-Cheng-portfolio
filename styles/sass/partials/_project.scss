@@ -16,6 +16,10 @@
     }
 }
 
+.image2, .image3 {
+    display: none;
+}
+
 .project-content {
     display: flex;
     flex-direction: column;
@@ -46,6 +50,7 @@
     z-index: 2;
     p {
         padding: 2rem;
+        
     }
     a {
         color: $lightestSlate;
@@ -71,6 +76,6 @@
 
     .icon-links i {
         margin-left: 0;
-        margin-right: 2rem;
+        margin-right: 4rem;
     }
 }
