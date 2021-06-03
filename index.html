@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css">
 
     <link rel="stylesheet" href="./styles/style.css">
+    <!-- website icon -->
+    <link rel="shortcut icon" href="./assets/logo-icon.ico">
 
     <title>Meining Cheng</title>
 </head>
@@ -53,7 +55,7 @@
                 <span class="hello-span">&lt; hello world &gt;</span>
                 <h1>Hi, my name is</h1>
                 <h2 class="big-heading">Meining Cheng.</h2>
-                <h3 class="big-heading">I am a <span class="developer-span big-heading">web developer</span></h3>
+                <h3 class="big-heading">I am a <span class="developer-span big-heading" id="span-animation"></span></h3>
                 <a href="#contact" class="button-link">Get in Touch!</a>
             </div>
         </div>
@@ -76,7 +78,7 @@
                             faced-paced manufacturing industries cultivated my abilities to make sound and meticulous
                             decisions as well as
                             handle complex tasks synchronously.</p>
-                        <p>When I am not coding, I enjoy watch movies and playing video games. </p>
+                        <p>When I am not coding, I enjoy hiking, watching movies and playing video games. </p>
                         <a href="./assets/Meining-Cheng-resume-05312021.pdf" target="_blank" rel="noopener" download
                             class="button-link">View Resume</a>
                     </div>
@@ -293,16 +295,12 @@
                         </ul>
 
                     </div>
-                    <form name="contact" method="POST" data-netlify="true">
-                        <!-- <label>Your Name: <input type="text" name="name" /></label>
-                                        <label>Your Email: <input type="email" name="email" /></label>
-                                        <label>Message: <textarea name="message"></textarea></label> -->
-
+                    <form name="contact" netlify>
                         <label for="name" class="sr-only">Name</label>
-                        <input type="text" id="name" placeholder="Name" required>
+                        <input type="text" id="name" value="name" placeholder="Name" required>
 
                         <label for="email" class="sr-only">Email</label>
-                        <input type="text" id="email" placeholder="Email" required>
+                        <input type="email" id="email" value="email" placeholder="Email" required>
 
                         <label for="message" class="sr-only">Input message</label>
                         <textarea name="message" id="message" cols="20" rows="5" placeholder="Hi, Meining! Let's chat!"
