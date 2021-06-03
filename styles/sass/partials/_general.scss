@@ -57,6 +57,10 @@ span {
     color: $green;
 }
 
+section {
+    margin-top: 5rem;
+}
+
 .fas, .fab {
     font-size: 2rem;
     color: $green;
@@ -126,5 +130,19 @@ img {
         height: 100%;
         position: absolute;
         z-index: 2;
+    }
+}
+
+
+.icon-links {
+    i {
+        font-size: 2rem;
+        margin-left: 2rem;
+        display: inline-block;
+        color: $slate;
+        &:hover {
+            color: $green;
+            transform: scale(1.2);
+        }
     }
 }

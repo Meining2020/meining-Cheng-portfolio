@@ -22,7 +22,7 @@
     flex-direction: column;
     width: 50%;
     max-width: 400px;
-    
+
     .project-heading {
         font-size: 2.5rem;
         color: $slate;
@@ -45,7 +45,7 @@
     .project-description {
         background-color: $lightestNavy;
         // position: absolute;
-        margin-left: -30%;
+        margin-left: -60%;
         z-index: 2;
         p {
             padding: 2rem;
@@ -56,15 +56,3 @@
         }
     }
 
-.project-links {
-    i {
-        font-size: 2rem;
-        margin-left: 2rem;
-        display: inline-block;
-        color: $slate;
-        &:hover {
-            color: $green;
-            transform: scale(1.2);
-        }
-    }
-}
