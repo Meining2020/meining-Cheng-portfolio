@@ -417,14 +417,21 @@ img:hover {
   font-size: 3rem;
   margin-left: 4rem;
   display: inline-block;
-  color: #8892b0;
   outline-offset: 3px;
 }
 
-.icon-links a:hover, .icon-links a:focus {
+.icon-links a:hover i,
+.icon-links a:focus i {
   color: #a7fab7;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+.icon-links a i {
+  color: #8892b0;
+  -webkit-transition: all, .5s ease;
+  transition: all, .5s ease;
+  display: inline-block;
 }
 
 header {

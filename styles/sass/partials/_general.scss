@@ -141,13 +141,17 @@ img {
     a {
         font-size: 3rem;
         margin-left: 4rem;
-        display: inline-block;
-        color: $slate;
-        outline-offset: 3px;
-        &:hover,
-        &:focus {
+        display: inline-block;       
+        outline-offset: 3px;      
+        &:hover i,
+        &:focus i{
             color: $green;
             transform: scale(1.2);
+        }
+        i {
+            color: $slate;
+            transition: all, .5s ease;
+            display: inline-block;
         }
     }
 }

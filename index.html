@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="./styles/style.css">
     <!-- website icon -->
     <link rel="shortcut icon" href="./assets/logo-icon.ico">
+    <!-- AOS library  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <title>Meining Cheng</title>
 </head>
@@ -74,7 +76,7 @@
             <div class="wrapper">
                 <h2 class="numbered-heading">About Me</h2>
                 <div class="about-content">
-                    <div class="about-text">
+                    <div class="about-text" data-aos="fade-right">
                         <p>Hello! My name is Meining Cheng. I am an enthusiastic Web Developer with a passion for
                             building engaging,
                             accessible and responsive websites and apps. My experience working as a Quality Assurance
@@ -87,7 +89,7 @@
                             class="button-link" aria-label="click to download resume, a new tab will open">View
                             Resume</a>
                     </div>
-                    <div class="photo-container">
+                    <div class="photo-container" data-aos="fade-left">
                         <img src="./assets/meining-cheng-photo-square.jpg" alt="photo of Meining Cheng">
                     </div>
                 </div>
@@ -98,7 +100,7 @@
         <section class="skills" id="skills">
             <div class="wrapper">
                 <h2 class="numbered-heading">Skills</h2>
-                <ul class="skill-list ">
+                <ul class="skill-list" data-aos="zoom-in">
                     <li class="skill-item">
                         <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank"
                             rel="noopener">
@@ -179,7 +181,7 @@
                 <div class="project-group">
                     <!-- Foodie's cookbook -->
                     <div class="project-container">
-                        <div class="project-image">
+                        <div class="project-image" data-aos="fade-right">
                             <img src="./assets/foodies-cookbook-size1.png" alt="sceenshot of foodie's cookcook"
                                 class="image1">
                             <img src="./assets/foodies-cookbook-size2.png" alt="sceenshot of foodie's cookcook"
@@ -187,7 +189,7 @@
                             <img src="./assets/foodies-cookbook-size3.png" alt="sceenshot of foodie's cookcook"
                                 class="image3">
                         </div>
-                        <div class="project-content">
+                        <div class="project-content" data-aos="fade-left">
                             <h3 class="project-heading">Foodie's CookBook</h3>
                             <div class="project-description">
                                 <p>Foodie's CookBook is a react based app which allows users to enter keyword to search
@@ -217,7 +219,7 @@
                     </div>
                     <!-- backronym generator -->
                     <div class="project-container reverse-container">
-                        <div class="project-image">
+                        <div class="project-image" data-aos="fade-left">
                             <img src="./assets/backcronym-generator-size1.png" alt="sceenshot of backcronym generator"
                                 class="image1">
                             <img src="./assets/backcronym-generator-size2.png" alt="sceenshot of backcronym generator"
@@ -225,7 +227,7 @@
                             <img src="./assets/backcronym-generator-size3.png" alt="sceenshot of backcronym generator"
                                 class="image3">
                         </div>
-                        <div class="project-content">
+                        <div class="project-content" data-aos="fade-right">
                             <h3 class="project-heading">Backronym Generator</h3>
                             <div class="project-description">
                                 <p>Backronym generator is here to generate a backronym which is an acronym created from
@@ -260,7 +262,7 @@
 
                     <!-- TMDB movie fun -->
                     <div class="project-container">
-                        <div class="project-image">
+                        <div class="project-image" data-aos="fade-right">
                             <img src="./assets/tmdb-movie-discover-size1.png" alt="sceenshot of TMDB movie fun"
                                 class="image1">
                             <img src="./assets/tmdb-movie-discover-size2.png" alt="sceenshot of TMDB movie fun"
@@ -269,7 +271,7 @@
                                 class="image3">
 
                         </div>
-                        <div class="project-content">
+                        <div class="project-content" data-aos="fade-left">
                             <h3 class="project-heading">TMDB Movie Fun</h3>
                             <div class="project-description">
                                 <p>TMDB Movie Fun is a movie discover app that allows users to search movies bytitles
@@ -309,7 +311,7 @@
             <div class="wrapper">
                 <h2 class="numbered-heading">Contact</h2>
                 <div class="contact-content">
-                    <div class="contact-context">
+                    <div class="contact-context" data-aos="fade-right">
                         <p>If you have any questions about me or my projects, please free to shot me a message via
                             the form or directly
                             drop an email to my inbox.</p>
@@ -325,7 +327,8 @@
                                 <a href="https://www.linkedin.com/in/meining-cheng-9562a8164/" target="_blank"
                                     rel="noopener">
                                     <i class="devicon-linkedin-plain" aria-hidden="true"></i>
-                                    <span class="sr-only">click to open a new tab for Meining's LikedIn profile page</span>
+                                    <span class="sr-only">click to open a new tab for Meining's LikedIn profile
+                                        page</span>
                                 </a>
                             </li>
                             <li class="icon-links">
@@ -337,7 +340,7 @@
                         </ul>
 
                     </div>
-                    <form name="contact" netlify>
+                    <form name="contact" netlify data-aos="fade-left">
                         <label for="name" class="sr-only">Name</label>
                         <input type="text" id="name" name="name" placeholder="Name" required>
 
@@ -359,8 +362,16 @@
 
     <!-- footer -->
     <footer>
-        <p>© Inspired by brittany Chiang & Developed by Meining Cheng</p>
+        <p>© Inspired by Brittany Chiang & Developed by Meining Cheng</p>
     </footer>
+
+    <!-- AOS library -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
 
     <!-- link to JS -->
     <script src="./scripts.js"></script>
