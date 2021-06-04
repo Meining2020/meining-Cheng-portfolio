@@ -4,8 +4,9 @@
     width: 80%;
     .contact-icons {
         display: flex;
-        i {
-            margin: 2rem auto;
+        a {
+            margin: 0 auto;
+            outline-offset: -1.7rem;
         }
     }
 }
@@ -19,7 +20,9 @@
     :nth-child(2) {
         color: $lightestSlate;
         font-family: $secondaryFont;
-        &:hover {
+        outline-offset: -1rem;
+        &:hover,
+        &:focus {
             color: $green;
         }
     }
@@ -30,6 +33,9 @@ form {
     display: flex;
     flex-direction: column;
     font-size: 1.6rem;
+    label {
+        color:$lightestSlate;
+    }
     input,
     textarea {
         margin-bottom: 2rem;
@@ -37,9 +43,15 @@ form {
         border-radius: 5px;
         background-color: $white;
         padding: 0.5rem;
+        &:focus {
+            background: $lightestSlate;
+        }
     }
     textarea {
         resize: none;
+    }
+    ::placeholder {
+        color: $navy;
     }
     .submit-button {
         background-color: $navy;

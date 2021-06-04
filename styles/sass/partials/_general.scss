@@ -63,8 +63,26 @@ section {
     padding: 5rem 0;
 }
 
-.fas, .fab {
-    font-size: 2rem;
+a {
+    color: $lightestSlate;
+    transition: all 0.5s ease;
+    &:hover {
+        color: $green;
+    }
+    &:focus {
+        outline: dashed 2px $green;
+    }
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.fas,
+.fab {
+    font-size: 3rem;
     color: $green;
 }
 
@@ -76,8 +94,12 @@ section {
     color: $green;
     padding: 2rem;
     margin: 2rem 0;
-    &:hover {
+    &:hover,
+    &:focus {
         background-color: $hoverColor;
+    }
+    &:focus {
+        outline: none;
     }
 }
 
@@ -108,7 +130,7 @@ main {
 }
 
 img {
-    transition: all .5s ;
+    transition: all 0.5s;
     filter: grayscale(80%);
     &:hover {
         filter: grayscale(0%);
@@ -116,14 +138,20 @@ img {
 }
 
 .icon-links {
-    i {
+    a {
         font-size: 3rem;
         margin-left: 4rem;
         display: inline-block;
         color: $slate;
-        &:hover {
+        outline-offset: 3px;
+        &:hover,
+        &:focus {
             color: $green;
             transform: scale(1.2);
         }
     }
 }
+
+//animation 
+
+

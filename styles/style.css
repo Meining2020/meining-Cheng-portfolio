@@ -329,8 +329,29 @@ section {
   padding: 5rem 0;
 }
 
-.fas, .fab {
-  font-size: 2rem;
+a {
+  color: #ccd6f6;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+a:hover {
+  color: #a7fab7;
+}
+
+a:focus {
+  outline: dashed 2px #a7fab7;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.fas,
+.fab {
+  font-size: 3rem;
   color: #a7fab7;
 }
 
@@ -344,8 +365,12 @@ section {
   margin: 2rem 0;
 }
 
-.button-link:hover {
+.button-link:hover, .button-link:focus {
   background-color: rgba(100, 255, 218, 0.1);
+}
+
+.button-link:focus {
+  outline: none;
 }
 
 main {
@@ -377,8 +402,8 @@ main {
 }
 
 img {
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   -webkit-filter: grayscale(80%);
           filter: grayscale(80%);
 }
@@ -388,14 +413,15 @@ img:hover {
           filter: grayscale(0%);
 }
 
-.icon-links i {
+.icon-links a {
   font-size: 3rem;
   margin-left: 4rem;
   display: inline-block;
   color: #8892b0;
+  outline-offset: 3px;
 }
 
-.icon-links i:hover {
+.icon-links a:hover, .icon-links a:focus {
   color: #a7fab7;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
@@ -451,18 +477,7 @@ header {
 }
 
 .nav-menu ul li a {
-  color: #ccd6f6;
   padding: 1rem;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-.nav-menu ul li a:hover {
-  color: #a7fab7;
-}
-
-.nav-menu ul li a:focus {
-  border: dashed 2px #a7fab7;
 }
 
 .nav-menu ul li a::before {
@@ -474,11 +489,6 @@ header {
 
 .menu-button {
   display: none;
-  cursor: pointer;
-}
-
-.fas {
-  font-size: 3rem;
 }
 
 .home-content {
@@ -503,7 +513,7 @@ header {
 }
 
 .scroll-down-button {
-  width: 40px;
+  display: block;
   margin: 0 auto;
 }
 
@@ -594,18 +604,19 @@ header {
 }
 
 .skill-item p {
-  margin: 2rem;
+  margin: 1rem 0 2rem;
 }
 
-.skill-item i {
+.skill-item a {
   color: #8892b0;
   font-size: 6rem;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   display: inline-block;
+  outline-offset: 3px;
 }
 
-.skill-item i:hover {
+.skill-item a:hover, .skill-item a:focus {
   color: #a7fab7;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
@@ -710,7 +721,7 @@ header {
   margin-right: 1rem;
 }
 
-.reverse-container .icon-links i {
+.reverse-container .icon-links a {
   margin-left: 0;
   margin-right: 4rem;
 }
@@ -729,8 +740,9 @@ header {
   display: flex;
 }
 
-.contact-content .contact-icons i {
-  margin: 2rem auto;
+.contact-content .contact-icons a {
+  margin: 0 auto;
+  outline-offset: -1.7rem;
 }
 
 .contact-context {
@@ -745,9 +757,10 @@ header {
 .contact-context :nth-child(2) {
   color: #ccd6f6;
   font-family: "Roboto Mono", monospace;
+  outline-offset: -1rem;
 }
 
-.contact-context :nth-child(2):hover {
+.contact-context :nth-child(2):hover, .contact-context :nth-child(2):focus {
   color: #a7fab7;
 }
 
@@ -763,6 +776,10 @@ form {
   font-size: 1.6rem;
 }
 
+form label {
+  color: #ccd6f6;
+}
+
 form input,
 form textarea {
   margin-bottom: 2rem;
@@ -772,8 +789,29 @@ form textarea {
   padding: 0.5rem;
 }
 
+form input:focus,
+form textarea:focus {
+  background: #ccd6f6;
+}
+
 form textarea {
   resize: none;
+}
+
+form ::-webkit-input-placeholder {
+  color: #162129;
+}
+
+form :-ms-input-placeholder {
+  color: #162129;
+}
+
+form ::-ms-input-placeholder {
+  color: #162129;
+}
+
+form ::placeholder {
+  color: #162129;
 }
 
 form .submit-button {
@@ -915,7 +953,7 @@ footer p {
         align-self: center;
     margin-bottom: 1rem;
   }
-  .project-content .icon-links i {
+  .project-content .icon-links a {
     margin: 0 2rem;
   }
   .about-content {
