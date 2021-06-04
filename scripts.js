@@ -62,3 +62,5 @@ const textAnimation = () => {
 }
 
 setTimeout(textAnimation, 300);
+
+
