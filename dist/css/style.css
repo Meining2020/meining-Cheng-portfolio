@@ -467,7 +467,7 @@ header {
 
 .nav-menu ul li a::before {
   content: "0" counter(listCounter) ".";
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #a7fab7;
   margin-right: 5px;
 }

@@ -41,7 +41,7 @@ header {
         padding: 1rem;
         &::before {
             content: "0" counter(listCounter) ".";
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             color: $green;
             margin-right: 5px;
         }
