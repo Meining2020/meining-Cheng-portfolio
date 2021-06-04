@@ -636,11 +636,6 @@ header {
   padding: 2rem;
 }
 
-.project-description a {
-  color: #ccd6f6;
-  text-decoration: underline;
-}
-
 .reverse-container {
   flex-direction: row-reverse;
   text-align: left;
