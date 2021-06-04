@@ -9,23 +9,31 @@ window.addEventListener('scroll', function () {
 })
 
 //burger icon show and disappear
-const burgerIcon = document.querySelector('.fa-bars');
+const burgerButton = document.querySelector('#nav-button');
+burgerButton.setAttribute('aria-expanded', false);
 //function to show nav bar when click burger icon
-burgerIcon.addEventListener('click', function () {
+burgerButton.addEventListener('click', function () {
     const navMenu = document.querySelector('#nav-menu');
     const navIcon = document.querySelector('#menu-icon');
     navMenu.classList.toggle('nav-show');
     navIcon.classList.toggle('fa-times');
+
+    //for aria accessbility
+    if (burgerButton.getAttribute('aria-expanded') === 'false') {
+        burgerButton.setAttribute('aria-expanded', true);
+    } else {
+        burgerButton.setAttribute('aria-expanded', false);
+    }
 })
 
 //scroll down arrow
-const arrowIcon = document.querySelector('#scroll-down-icon');
+const arrowIcon = document.querySelector('#scroll-down-button');
 arrowIcon.addEventListener('click', function () {
     arrowIcon.scrollIntoView();
 })
 
 const spanElement = document.getElementById('span-animation');
-const text = "web developer";
+const text = "web developer.";
 const splittedText = text.split("");
 let currentText = '';
 let direction = 0;

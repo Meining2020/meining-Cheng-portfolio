@@ -38,15 +38,7 @@ header {
     margin-left: 1.5rem;
     counter-increment: listCounter;
     a {
-        color: $lightestSlate;
         padding: 1rem;
-        transition: all 0.5s ease;
-        &:hover {
-            color: $green;
-        }
-        &:focus {
-            border: dashed 2px $green;
-        }
         &::before {
             content: "0" counter(listCounter) ".";
             font-size: 1.8rem;
@@ -57,12 +49,7 @@ header {
 }
 
 .menu-button {
-    display: none;
-    cursor: pointer;
-}
-
-.fas {
-    font-size: 3rem;
+    display: none;  
 }
 
 .home-content {
@@ -81,7 +68,7 @@ header {
 }
 
 .scroll-down-button {
-    width: 40px;
+    display: block;
     margin: 0 auto;
     i {
         position: absolute;

@@ -14,14 +14,15 @@
     text-align: center;
     display: block;
     p {
-        margin: 2rem;
+        margin: 1rem 0 2rem;
     }
-    i {
+    a {
         color: $slate;
         font-size: 6rem;
         transition: all 0.5s ease;
-        display: inline-block;       
-        &:hover {
+        display: inline-block;  
+        outline-offset: 3px;       
+        &:hover, &:focus {
             color: $green;
             transform: scale(1.1);
         }
