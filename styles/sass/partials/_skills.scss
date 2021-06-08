@@ -17,14 +17,17 @@
         margin: 1rem 0 2rem;
     }
     a {
-        color: $slate;
-        font-size: 6rem;
-        transition: all 0.5s ease;
-        display: inline-block;  
-        outline-offset: 3px;       
-        &:hover, &:focus {
-            color: $green;
+        display: inline-block;
+        outline-offset: 3px;
+        &:hover i,
+        &:focus i {
+            color: $themeColor;
             transform: scale(1.1);
+        }
+        i {
+            color: $iconColor;
+            font-size: 6rem;
+            transition: all, 0.5s ease;
         }
     }
 }

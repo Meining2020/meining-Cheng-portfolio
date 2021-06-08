@@ -1,15 +1,32 @@
 // colors
-$navy: #162129;
-$lightNavy: #1a252c;
-$lightestNavy:#1a373c;
-$slate: #8892b0;
-$lightSlate: #a8b2d1;
-$lightestSlate: #ccd6f6;
-$white: #e6f1ff;
-$green: #a7fab7;
+// $navy: #162129;
+// $lightNavy: #1a252c;
+// $lightestNavy:#1a373c;
+// $slate: #8892b0;
+// $lightSlate: #a8b2d1;
+// $lightestSlate: #ccd6f6;
+// $white: #e6f1ff;
+// $green: #a7fab7;
+// $lightGreen: #4a8054;
+// $hoverColor: rgba(100, 255, 218, 0.1);
+// $projectHoverColor: rgba(20, 34, 30, 0.733);
+
+
+$backgroundColor: #162129;
+$navColor: #1a252c;
+$headingLineColor:#1a373c;
+$iconColor: #8892b0;
+$headingColor: #a8b2d1;
+$contentColor: #ccd6f6;
+$formColor: #e6f1ff;
+$themeColor: #a7fab7;
 $lightGreen: #4a8054;
 $hoverColor: rgba(100, 255, 218, 0.1);
 $projectHoverColor: rgba(20, 34, 30, 0.733);
+
+
+// $light-theme: false;
+
 // fonts
 $mainFont: 'Poppins', sans-serif;
 $secondaryFont: 'Roboto Mono', monospace;

@@ -18,6 +18,7 @@ profolio.init = () => {
     burgerButton.addEventListener('click', function () {
         const navMenu = document.querySelector('#nav-menu');
         const navIcon = document.querySelector('#menu-icon');
+        const navItem = document.querySelectorAll("a[tabindex='-1']");
         navMenu.classList.toggle('nav-show');
         navIcon.classList.toggle('fa-times');
 
@@ -27,6 +28,11 @@ profolio.init = () => {
         } else {
             burgerButton.setAttribute('aria-expanded', false);
         }
+
+        //tab through nav items
+        navItem. forEach(function(item) {
+            item.setAttribute('tabindex', '0');
+        })
     })
 
     //scroll down arrow

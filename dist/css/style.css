@@ -341,10 +341,14 @@ button {
   border: none;
 }
 
-.fas,
-.fab {
+button:focus, button:hover {
+  outline: dashed 2px #a7fab7;
+}
+
+i {
   font-size: 3rem;
   color: #a7fab7;
+  display: inline-block;
 }
 
 .button-link {
@@ -355,6 +359,7 @@ button {
   color: #a7fab7;
   padding: 2rem;
   margin: 2rem 0;
+  text-align: center;
 }
 
 .button-link:hover, .button-link:focus {
@@ -417,8 +422,7 @@ img:hover {
 
 .icon-links a i {
   color: #8892b0;
-  transition: all, .5s ease;
-  display: inline-block;
+  transition: all, 0.5s ease;
 }
 
 header {
@@ -491,15 +495,63 @@ header {
   font-size: 6rem;
 }
 
-.scroll-down-button {
+.control-button {
   display: block;
   margin: 0 auto;
+  position: absolute;
+  left: 50%;
 }
 
-.scroll-down-button i {
-  position: absolute;
+.control-button i {
   font-size: 5rem;
-  cursor: pointer;
+}
+
+.theme-toggler-container {
+  background-color: #162129;
+  width: 45px;
+  height: 80px;
+  position: absolute;
+  right: 0;
+  bottom: 6rem;
+  border: solid 2px #ccd6f6;
+  border-radius: 100px;
+}
+
+.theme-toggler-container input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.theme-toggler-container input:checked + label:after {
+  top: -8px;
+}
+
+.theme-toggler-container label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.theme-toggler-container label :first-child {
+  margin-bottom: 0.8rem;
+}
+
+.theme-toggler-container label i {
+  display: block;
+  font-size: 2.5rem;
+}
+
+.theme-toggler-container label:after {
+  content: "";
+  width: 35px;
+  height: 35px;
+  border-radius: 100px;
+  background-color: white;
+  position: absolute;
+  top: 27px;
 }
 
 @keyframes arrow {
@@ -567,16 +619,20 @@ header {
 }
 
 .skill-item a {
-  color: #8892b0;
-  font-size: 6rem;
-  transition: all 0.5s ease;
   display: inline-block;
   outline-offset: 3px;
 }
 
-.skill-item a:hover, .skill-item a:focus {
+.skill-item a:hover i,
+.skill-item a:focus i {
   color: #a7fab7;
   transform: scale(1.1);
+}
+
+.skill-item a i {
+  color: #8892b0;
+  font-size: 6rem;
+  transition: all, 0.5s ease;
 }
 
 .project-container {
@@ -611,7 +667,7 @@ header {
 
 .project-content .project-heading {
   font-size: 2.5rem;
-  color: #8892b0;
+  color: #ccd6f6;
 }
 
 .project-content .skills-used {
@@ -623,12 +679,11 @@ header {
 
 .project-content .skills-used li {
   margin: 1rem 0 1rem 1rem;
-  color: #a7fab7;
 }
 
 .project-description {
   background-color: #1a373c;
-  margin-left: -60%;
+  margin-left: -20%;
   z-index: 2;
 }
 
@@ -642,7 +697,7 @@ header {
 }
 
 .reverse-container .project-description {
-  margin-right: -60%;
+  margin-right: -20%;
   margin-left: 0;
 }
 
@@ -677,11 +732,18 @@ header {
 
 .contact-context {
   width: 50%;
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-context p,
-.contact-context a {
-  padding: 2rem;
+.contact-context a, .contact-context ul {
+  margin: 2rem;
+}
+
+.contact-context p:nth-child(1) {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .contact-context :nth-child(2) {
@@ -692,6 +754,16 @@ header {
 
 .contact-context :nth-child(2):hover, .contact-context :nth-child(2):focus {
   color: #a7fab7;
+}
+
+.contact-context .button-link {
+  width: 150px;
+  padding: 2rem;
+  margin: 1rem 2rem 2rem;
+}
+
+.contact-context .icon-links {
+  margin-right: 4rem;
 }
 
 form {
@@ -707,7 +779,7 @@ form label {
 
 form input,
 form textarea {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   border: solid 2px #a7fab7;
   border-radius: 5px;
   background-color: #e6f1ff;
@@ -735,7 +807,7 @@ form .submit-button {
 
 footer {
   margin-top: 2rem;
-  background-color: #1a373c;
+  background-color: #162129;
 }
 
 footer p {
@@ -761,6 +833,9 @@ footer p {
 @media (max-width: 940px) {
   .wrapper {
     width: 90%;
+  }
+  section {
+    padding: 6rem 0;
   }
   .numbered-heading {
     font-size: 3rem;
@@ -802,13 +877,11 @@ footer p {
   }
   .nav-show {
     right: 0;
+    z-index: 9;
   }
   .big-heading {
-    font-size: 7vh;
+    font-size: 5rem;
   }
-}
-
-@media (max-width: 840px) {
   .project-container {
     text-align: center;
     position: relative;
@@ -834,11 +907,6 @@ footer p {
     background-color: rgba(20, 34, 30, 0.733);
     padding: 2rem;
   }
-  .project-content .project-heading,
-  .project-content p,
-  .project-content a {
-    color: #e6f1ff;
-  }
   .project-content .project-description {
     margin: 0 auto;
     background-color: transparent;
@@ -853,6 +921,9 @@ footer p {
   .project-content .icon-links a {
     margin: 0 2rem;
   }
+}
+
+@media (max-width: 840px) {
   .about-content {
     width: 100%;
   }
@@ -862,6 +933,15 @@ footer p {
   .contact-context,
   form {
     width: 80%;
+    margin: 0 auto;
+  }
+  .contact-context a {
+    margin: 2rem auto;
+  }
+  .contact-context .button-link {
+    margin: 1rem auto;
+  }
+  .contact-context .icon-links {
     margin: 0 auto;
   }
 }
