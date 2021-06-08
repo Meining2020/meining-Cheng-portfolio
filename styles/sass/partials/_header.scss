@@ -6,7 +6,7 @@ header {
 }
 
 .logo {
-    color:$green;
+    color: $themeColor;
     transition: all 0.5s ease;
     &:hover {
         transform: scaleX(1.2);
@@ -14,7 +14,7 @@ header {
 }
 
 .nav-bar {
-    background-color: $navy;
+    background-color: $backgroundColor;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -24,7 +24,7 @@ header {
 }
 
 .sticky {
-    background-color: $lightNavy;
+    background-color: $navColor;
     position: fixed;
     z-index: 5;
 }
@@ -42,14 +42,14 @@ header {
         &::before {
             content: "0" counter(listCounter) ".";
             font-size: 1.6rem;
-            color: $green;
+            color: $themeColor;
             margin-right: 5px;
         }
     }
 }
 
 .menu-button {
-    display: none;  
+    display: none;
 }
 
 .home-content {
@@ -67,13 +67,66 @@ header {
     font-size: 6rem;
 }
 
-.scroll-down-button {
+.control-button {
     display: block;
     margin: 0 auto;
+    position: absolute;
+    left: 50%;
     i {
-        position: absolute;
         font-size: 5rem;
-        cursor: pointer;
+    }
+}
+
+// .theme-button {
+//     right: -40%;
+//     bottom: 3rem;
+//     i {
+//         font-size: 3rem;
+//     }
+// }
+
+.theme-toggler-container {
+    background-color: $backgroundColor;
+    width: 45px;
+    height: 80px;
+    position: absolute;
+    right: 0;
+    bottom: 6rem;
+    border: solid 2px $contentColor;
+    border-radius: 100px;
+    input {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        // opacity: 0;
+    }
+
+    input:checked + label:after {
+        top: -8px;//light
+    }
+
+    label {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        height: 100%;
+        :first-child {
+            margin-bottom: 0.8rem;
+        }
+        i {
+            display: block;
+            font-size: 2.5rem;
+        }
+    }
+    label:after {
+        content: "";
+        width: 35px;
+        height: 35px;
+        border-radius: 100px;
+        background-color: white;
+        position: absolute;
+        top: 27px; //dark
     }
 }
 
@@ -90,4 +143,3 @@ header {
 .arrow-animation {
     animation: arrow 1.5s linear infinite;
 }
-

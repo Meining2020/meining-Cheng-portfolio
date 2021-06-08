@@ -14,7 +14,7 @@
     <!-- Devicon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css">
     <!-- website icon -->
-    <link rel="shortcut icon" href="./assets/favicon.ico">
+    <link rel="shortcut icon" href="./assets/logo-icon.png">
     <!-- CSS style -->
     <link rel="stylesheet" href="./dist/css/style.min.css">
     <!-- AOS library  -->
@@ -29,30 +29,32 @@
             <div class="logo">
                 <a href="#" class="logo" aria-label="Meining's portfolio logo">&lt; m &gt;</a>
             </div>
+            <button class="menu-button icon-button" id="nav-button" aria-label="menu control button"
+                aria-expanded="false">
+                <i class="fas fa-bars" id="menu-icon" aria-hidden="true"></i>
+            </button>
             <div class="nav-menu" id="nav-menu">
-                <ul>
+                <ul role="menubar">
                     <li>
-                        <a href="#about">About</a>
+                        <a href="#about" role="menuitem" tabindex='-1'>About</a>
                     </li>
                     <li>
-                        <a href="#skills">Skills</a>
+                        <a href="#skills" role="menuitem" tabindex="-1">Skills</a>
                     </li>
                     <li>
-                        <a href="#projects">Projects</a>
+                        <a href="#projects" role="menuitem" tabindex="-1">Projects</a>
                     </li>
                     <li>
-                        <a href="#contact">Contact</a>
+                        <a href="#contact" role="menuitem" tabindex="-1">Contact</a>
                     </li>
                 </ul>
             </div>
-            <button class="menu-button icon-button" id="nav-button" aria-label="menu" aria-expanded="false">
-                <i class="fas fa-bars" id="menu-icon" aria-hidden="true"></i>
-            </button>
+
         </nav>
 
         <div class="home-content">
             <div class="wrapper">
-                <span class="hello-span" aria-label="hello world">&lt; hello world &gt;</span>
+                <span class="hello-span" aria-label="hello world">&lt; hello world /&gt;</span>
                 <h1>Hi, my name is</h1>
                 <h2 class="big-heading">Meining Cheng.</h2>
                 <h3 class="big-heading">
@@ -63,9 +65,9 @@
                 <a href="#contact" class="button-link" aria-label="contact">Get in Touch!</a>
             </div>
         </div>
-        <button class="scroll-down-button icon-button" id="scroll-down-button"
+        <button class="control-button  arrow-animation" id="scroll-down-button"
             aria-label="scroll down button, click to go to next section">
-            <i class="fas fa-angle-down arrow-animation" id="scroll-down-icon" aria-hidden="true"></i>
+            <i class="fas fa-angle-down" id="scroll-down-icon" aria-hidden="true"></i>
         </button>
     </header>
 
@@ -78,7 +80,8 @@
                     <div class="about-text" data-aos="fade-right">
                         <p>Hello! My name is Meining Cheng. I am an enthusiastic Web Developer with a passion for
                             building engaging,
-                            accessible and responsive websites and apps. My experience working as a Quality Assurance
+                            accessible and responsive websites and apps. 
+                            My experience working as a Quality Assurance
                             manager in
                             faced-paced manufacturing industries cultivated my abilities to make sound and meticulous
                             decisions as well as
@@ -168,6 +171,28 @@
                         </a>
                         <p>VS Code</p>
                     </li>
+                    <li class="skill-item">
+                        <a href="https://developer.wordpress.org/rest-api/" target="_blank" rel="noopener">
+                            <span class="sr-only">click to open a new tab to learn more about REST API</span>
+                            <i class="fas fa-cog" aria-hidden="=true"></i>
+                        </a>
+                        <p>REST API</p>
+                    </li>
+                    <li class="skill-item">
+                        <a href="https://www.w3.org/WAI/tips/developing/" target="_blank" rel="noopener">
+                            <span class="sr-only">click to open a new tab to learn more about accessibility</span>
+                            <i class="fas fa-universal-access"></i>
+                        </a>
+                        <p>Accessibility</p>
+                    </li>
+                    <li class="skill-item">
+                        <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design"
+                            target="_blank" rel="noopener">
+                            <span class="sr-only">click to open a new tab to learn more about responsive design</span>
+                            <i class="fas fa-mobile-alt"></i>
+                        </a>
+                        <p>Responsive Design</p>
+                    </li>
 
                 </ul>
             </div>
@@ -229,7 +254,8 @@
                         <div class="project-content" data-aos="fade-right">
                             <h3 class="project-heading">Backronym Generator</h3>
                             <div class="project-description">
-                                <p>Backronym generator is a client-based application to generate a backronym which is an acronym created from
+                                <p>Backronym generator is a client-based application to generate a backronym which is an
+                                    acronym created from
                                     an
                                     exsiting word. This is a group project built collaboratively with
                                     teammates.
@@ -271,7 +297,8 @@
                         <div class="project-content" data-aos="fade-left">
                             <h3 class="project-heading">TMDB Movie Fun</h3>
                             <div class="project-description">
-                                <p>TMDB Movie Fun is a paired-programmed project that allows users to search movies by titles and genres, and obtain detailed information about
+                                <p>TMDB Movie Fun is a paired-programmed project that allows users to search movies by
+                                    titles and genres, and obtain detailed information about
                                     the movie and cast.</p>
                             </div>
                             <ul class="skills-used">
@@ -310,6 +337,8 @@
                             the form or directly
                             drop an email to my inbox.</p>
                         <a href="mailto:meining.cheng@gmail.com">meining.cheng@gmail.com</a>
+                        <a href="https://meetingwithmeiningcheng.as.me/" target="_blank" rel="noopener"
+                            class="button-link">Calendly</a>
                         <ul class="contact-icons">
                             <li class="icon-links">
                                 <a href="https://github.com/Meining2020" target="_blank" rel="noopener">
@@ -334,7 +363,7 @@
                         </ul>
 
                     </div>
-                    <form name="contact" netlify data-aos="fade-left">
+                    <form name="contact" data-aos="fade-left" netlify>
                         <label for="name" class="sr-only">Name</label>
                         <input type="text" id="name" name="name" placeholder="Name" required>
 

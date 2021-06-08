@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    background-color: $navy;
+    background-color: $backgroundColor;
 }
 
 .wrapper {
@@ -26,7 +26,7 @@ button {
 
 h1 {
     font-size: 2rem;
-    color: $green;
+    color: $themeColor;
     font-family: $secondaryFont;
     margin: 2rem 0;
 }
@@ -35,12 +35,12 @@ h2,
 h3 {
     font-size: 7rem;
     font-weight: 600;
-    color: $lightestSlate;
+    color: $contentColor;
     margin: 1rem 0;
 }
 
 h3 {
-    color: $lightSlate;
+    color: $headingColor;
 }
 
 a,
@@ -50,12 +50,12 @@ span {
 }
 
 p {
-    color: $lightestSlate;
+    color: $contentColor;
     line-height: 1.5;
 }
 
 span {
-    color: $green;
+    color: $themeColor;
 }
 
 section {
@@ -64,13 +64,13 @@ section {
 }
 
 a {
-    color: $lightestSlate;
+    color: $contentColor;
     transition: all 0.5s ease;
     &:hover {
-        color: $green;
+        color: $themeColor;
     }
     &:focus {
-        outline: dashed 2px $green;
+        outline: dashed 2px $themeColor;
     }
 }
 
@@ -78,22 +78,27 @@ button {
     cursor: pointer;
     background-color: transparent;
     border: none;
+    &:focus,
+    &:hover {
+        outline: dashed 2px $themeColor;
+    }
 }
 
-.fas,
-.fab {
+i {
     font-size: 3rem;
-    color: $green;
+    color: $themeColor;
+    display: inline-block;
 }
 
 .button-link {
     font-family: $secondaryFont;
     display: inline-block;
-    border: solid 1px $green;
+    border: solid 1px $themeColor;
     border-radius: 4px;
-    color: $green;
+    color: $themeColor;
     padding: 2rem;
     margin: 2rem 0;
+    text-align: center;
     &:hover,
     &:focus {
         background-color: $hoverColor;
@@ -116,14 +121,14 @@ main {
         content: "";
         width: 430px;
         height: 2px;
-        background-color: $lightestNavy;
+        background-color: $headingLineColor;
         top: 18px;
         left: 230px;
     }
     &::before {
         content: "0" counter(headingCounter) ".";
         font-size: 3rem;
-        color: $green;
+        color: $themeColor;
         font-family: $secondaryFont;
         margin-right: 5px;
     }
@@ -141,21 +146,18 @@ img {
     a {
         font-size: 3rem;
         margin-left: 4rem;
-        display: inline-block;       
-        outline-offset: 3px;      
+        display: inline-block;
+        outline-offset: 3px;
         &:hover i,
-        &:focus i{
-            color: $green;
+        &:focus i {
+            color: $themeColor;
             transform: scale(1.2);
         }
         i {
-            color: $slate;
-            transition: all, .5s ease;
-            display: inline-block;
+            color: $iconColor;
+            transition: all, 0.5s ease;
         }
     }
 }
 
-//animation 
-
-
+//animation

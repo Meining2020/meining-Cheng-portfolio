@@ -28,25 +28,23 @@
 
     .project-heading {
         font-size: 2.5rem;
-        color: $slate;
+        color: $contentColor;
     }
 
     .skills-used {
         display: flex;
-        color: $lightestSlate;
+        color: $contentColor;
         font: 1.5rem $secondaryFont;
         align-self: flex-end;
         li {
             margin: 1rem 0 1rem 1rem;
-            color: $green;
         }
     }
 }
 
 .project-description {
-    background-color: $lightestNavy;
-    // position: absolute;
-    margin-left: -60%;
+    background-color: $headingLineColor;
+    margin-left: -20%;
     z-index: 2;
     p {
         padding: 2rem;     
@@ -57,7 +55,7 @@
     flex-direction: row-reverse;
     text-align: left;
     .project-description {
-        margin-right: -60%;
+        margin-right: -20%;
         margin-left: 0;
     }
 
