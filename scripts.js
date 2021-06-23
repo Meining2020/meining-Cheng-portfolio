@@ -43,7 +43,7 @@ profolio.init = () => {
 
     //span animation
     const spanElement = document.getElementById('span-animation');
-    const text = "web developer.";
+    const text = "Front-end Developer.";
     const splittedText = text.split("");
     let currentText = '';
     let direction = 0;
